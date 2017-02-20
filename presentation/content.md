@@ -311,22 +311,80 @@ A declarative framework for building virtual reality experiences on the Web
 
 ------
 
-#More Reality
+#Photosphere
 
-- 360 / panoramic images and videos
-- Textures
-- Models
+<!-- .slide: data-background="media/img/aframe.png" data-transition="fade-in slide-out" -->
+
+```html
+<a-scene>
+  <a-assets>
+    <img src="/media/img/lovely-park-360.jpg" id="lovely-park" />
+  </a-assets>
+
+  <a-sky src="#lovely-park"></a-sky>
+</a-scene>
+
+```
 
 ---
 
-##Photosphere
 
+#Photosphere
 
 <!-- .slide: data-background="media/img/aframe.png" data-transition="fade-in slide-out" -->
 
 <div class="stretch" data-aframe-scene="scenes/360sky.html"></div>
 
 <p>flickr.com/peterleth</p>
+------
+
+#Panorama
+
+<!-- .slide: data-background="media/img/aframe.png" data-transition="fade-in slide-out" -->
+
+```html
+<a-assets>
+  <img src="/media/img/clyde.jpg" id="clyde" />
+</a-assets>
+
+<a-curvedimage src="#clyde" height="30" radius="20" theta-length="360">
+</a-curvedimage>
+
+```
+
+---
+
+#Panorama
+
+<!-- .slide: data-background="media/img/aframe.png" data-transition="fade-in slide-out" -->
+
+<div class="stretch" data-aframe-scene="scenes/clyde.html"></div>
+
+------
+
+#Texture
+
+<!-- .slide: data-background="media/img/aframe.png" data-transition="fade-in slide-out" -->
+
+```html
+<a-assets>
+  <img src="/media/img/TexturesCom_Grass.jpg" id="grass" />
+</a-assets>
+
+<a-plane src="#grass" rotation="-90 0 0"
+    position="0 0 -4" width="4" height="4">
+</a-plane>
+
+```
+
+---
+
+#Texture
+
+<!-- .slide: data-background="media/img/aframe.png" data-transition="fade-in slide-out" -->
+
+<div class="stretch" data-aframe-scene="scenes/hello-texture.html"></div>
+
 ------
 
 <!-- .slide: data-background="media/img/aframe.jpg" -->
@@ -509,4 +567,6 @@ http://www.textures.com/
 https://clara.io/
 https://github.com/aframevr/awesome-aframe
 
-##Great examples
+---
+
+https://github.com/cathawker/webvr-workshop
